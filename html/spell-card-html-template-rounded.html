@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spell Card</title>
+    <style>
+        .spell-card {
+            width: 250px;
+            height: 350px;
+            border: 4px solid #8b0000;
+            border-radius: 10px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            background-color: #8b0000;
+        }
+        .spell-title {
+            background-color: white;
+            color: black;
+            margin: 3px;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            border-radius: 5px;
+        }
+        .spell-properties {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            padding: 3px;
+        }
+        .property {
+            background-color: white;
+            padding: 5px;
+            font-size: 12px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .property-title {
+            font-weight: bold;
+            margin-bottom: 2px;
+        }
+        .spell-description {
+            margin: 3px;
+            padding: 10px;
+            font-size: 14px;
+            height: 170px;
+            overflow-y: auto;
+            text-align: center;
+            background-color: white;
+            border-radius: 5px;
+        }
+        .spell-footer {
+            height: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="spell-card">
+        <div class="spell-title">{SPELL_NAME}</div>
+        <div class="spell-properties">
+            <div class="property">
+                <div class="property-title">CASTING TIME</div>
+                <div>{CASTING_TIME}</div>
+            </div>
+            <div class="property">
+                <div class="property-title">RANGE</div>
+                <div>{RANGE}</div>
+            </div>
+            <div class="property">
+                <div class="property-title">COMPONENTS</div>
+                <div>{COMPONENTS}</div>
+            </div>
+            <div class="property">
+                <div class="property-title">DURATION</div>
+                <div>{DURATION}</div>
+            </div>
+        </div>
+        <div class="spell-description">{DESCRIPTION}</div>
+        <div class="spell-footer"></div>
+    </div>
+</body>
+</html>
